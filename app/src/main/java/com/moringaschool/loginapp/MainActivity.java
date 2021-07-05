@@ -8,7 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import static androidx.constraintlayout.motion.widget.TransitionBuilder.validate;
+
+public class MainActivity<passwaord> extends AppCompatActivity {
  private EditText ename;
  private EditText epassword;
  private Button button3;
@@ -16,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
 private String Username = "Admin";
 private String password = "12345678";
 
-@Override
+boolean invalid = false;
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -25,22 +28,35 @@ private String password = "12345678";
         button3 = findViewById(R.id.button3);
 
 
-
         ename.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public int hashCode() {
+                return super.hashCode();
+            }
+
             @Override
             public void onClick(View v) {
                 String inputName = ename.getText().toString();
                 String inputPassword = epassword.getText().toString();
-                if(inputName.isEmpty() || inputPassword.isEmpty()) {
+                if (inputName.isEmpty() || inputPassword.isEmpty()) {
 
 
-
-                            Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
+                }else{
+                    invalid = validate(inputName, inputPassword);
+                counter--;
                 }
-
-
+s
             }
         });
-private boolean validates(String ename,String password){
     }
+private boolean validates(String name,String Passwaord){
+        if(ename.equals(Username) && passwaord.equals(password)){
+            return true;
+        }
+        return false;
+
 }
+
+
+HDA
