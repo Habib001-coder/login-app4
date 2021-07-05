@@ -42,10 +42,10 @@ boolean invalid = false;
 
 
                     Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
-                }else{
-                    invalid = validate(inputName, inputPassword);
-                counter--;
-                }
+//                }else{
+//                    invalid = validate(inputName, inputPassword);
+//                counter--;
+//                }
 s
             }
         });
