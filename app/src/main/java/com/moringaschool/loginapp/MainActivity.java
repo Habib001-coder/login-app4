@@ -18,7 +18,12 @@ public class MainActivity<passwaord> extends AppCompatActivity {
 private String Username = "Admin";
 private String password = "12345678";
 
-boolean invalid = false;
+
+boolean inValid = false;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,20 +48,26 @@ boolean invalid = false;
 
                     Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
                 }else{
-                    invalid = validate(inputName, inputPassword);
-                counter--;
+                 inValid = validate(inputName, inputPassword);
+                    boolean isValid;
+                    if(!isValid)
+
+
+
+
+                         
+                         
                 }
-s
+
             }
         });
     }
-private boolean validates(String name,String Passwaord){
+private boolean validate(String name,String Passwaord){
         if(ename.equals(Username) && passwaord.equals(password)){
             return true;
         }
         return false;
 
 }
-
 
 HDA
