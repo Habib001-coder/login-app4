@@ -2,6 +2,7 @@ package com.moringaschool.loginapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
  import android.view.View;
 import android.widget.Button;
@@ -53,17 +54,33 @@ public class MainActivity<passwaord> extends AppCompatActivity {
                         counter--;
                     Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
 
-                if(counter == 0);
+                    if (counter == 0) ;
+
+                    button3.setEnabled(false);
                 }
 
+            }else
+
+            {
+                Toast.makeText(MainActivity.this, "Login was successful", Toast.LENGTH_LONG).show();
+//                 Add the code to new activity
+                Intent intent = new Intent(MainActivity.this, HomepageActivity.class);
+                startActivity(intent);
+
+
             }
+
+
         });
     }
 
     private boolean validate(String name, String Passwaord) {
         if (button3.equals(Username) && passwaord.equals(password)) {
             return true;
+
+            return false;
         }
-        return false;
     }
-}
+
+        }
+
