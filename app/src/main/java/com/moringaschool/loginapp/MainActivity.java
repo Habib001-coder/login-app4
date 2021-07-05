@@ -11,17 +11,16 @@ import android.widget.Toast;
 import static androidx.constraintlayout.motion.widget.TransitionBuilder.validate;
 
 public class MainActivity<passwaord> extends AppCompatActivity {
- private EditText ename;
- private EditText epassword;
- private Button button3;
+    private EditText ename;
+    private EditText epassword;
+    private Button button3;
 
-private String Username = "Admin";
-private String password = "12345678";
-
-
-boolean inValid = false;
+    private String Username = "Admin";
+    private String password = "12345678";
 
 
+    boolean inValid = false;
+    private int counter = 5;
 
 
     @Override
@@ -47,27 +46,24 @@ boolean inValid = false;
 
 
                     Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
-                }else{
-                 inValid = validate(inputName, inputPassword);
-                    boolean isValid;
-                    if(!isValid)
+                } else {
+                    inValid = validate(inputName, inputPassword);
+                    boolean isValid = true;
+                    if (!isValid)
+                        counter--;
+                    Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
 
 
-
-
-                         
-                         
                 }
 
             }
         });
     }
-private boolean validate(String name,String Passwaord){
-        if(ename.equals(Username) && passwaord.equals(password)){
+
+    private boolean validate(String name, String Passwaord) {
+        if (ename.equals(Username) && passwaord.equals(password)) {
             return true;
         }
         return false;
-
+    }
 }
-
-HDA
