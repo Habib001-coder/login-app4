@@ -3,7 +3,7 @@ package com.moringaschool.loginapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
+ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -32,7 +32,7 @@ public class MainActivity<passwaord> extends AppCompatActivity {
         button3 = findViewById(R.id.button3);
 
 
-        ename.setOnClickListener(new View.OnClickListener() {
+        button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public int hashCode() {
                 return super.hashCode();
@@ -61,7 +61,7 @@ public class MainActivity<passwaord> extends AppCompatActivity {
     }
 
     private boolean validate(String name, String Passwaord) {
-        if (ename.equals(Username) && passwaord.equals(password)) {
+        if (button3.equals(Username) && passwaord.equals(password)) {
             return true;
         }
         return false;
