@@ -51,9 +51,9 @@ public class MainActivity<passwaord> extends AppCompatActivity {
                     boolean isValid = true;
                     if (!isValid)
                         counter--;
-                    Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
 
-
+                if(counter == 0);
                 }
 
             }
