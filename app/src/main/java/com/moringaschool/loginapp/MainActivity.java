@@ -50,11 +50,11 @@ s
             }
         });
     }
-//private boolean validates(String name,String Passwaord){
-//        if(ename.equals(Username) && passwaord.equals(password)){
-//            return true;
-//        }
-//        return false;
+private boolean validates(String name,String Passwaord){
+        if(ename.equals(Username) && passwaord.equals(password)){
+            return true;
+        }
+        return false;
 
 }
 
