@@ -59,9 +59,11 @@ public class MainActivity<passwaord> extends AppCompatActivity {
                     button3.setEnabled(false);
                 }
 
-            }else
+
+            } else
 
             {
+
                 Toast.makeText(MainActivity.this, "Login was successful", Toast.LENGTH_LONG).show();
 //                 Add the code to new activity
                 Intent intent = new Intent(MainActivity.this, HomepageActivity.class);
@@ -80,7 +82,7 @@ public class MainActivity<passwaord> extends AppCompatActivity {
 
             return false;
         }
-    }
 
-        }
+
+
 
