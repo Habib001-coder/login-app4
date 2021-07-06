@@ -45,47 +45,48 @@ public class MainActivity<passwaord> extends AppCompatActivity {
             public void onClick(View v) {
                 String inputName = ename.getText().toString();
                 String inputPassword = epassword.getText().toString();
+                isValid = validate(inputName, inputPassword);
                 if (inputName.isEmpty() || inputPassword.isEmpty()) {
 
 
                     Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
-                } else {
-                    isValid = validate(inputName, inputPassword);
-                    if (!isValid)
-                        (
-                        counter -- ;
+                } else if (isValid){
+//                    isValid = validate(inputName, inputPassword);
+//                    if (!isValid) {
+//                        counter--;
+//
+//
+                        Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
+//
+//                        if (counter == 0) ;
+//
+//                        button3.setEnabled(false);
+//
+//sxzda
+//                    }
 
 
 
-
-                    Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
-
-                    if (counter == 0) ;
-
-                    button3.setEnabled(false);
 
 
                 }
+                else
 
-            }else
+                {
 
-            {
-
-                Toast.makeText(MainActivity.this, "Login was successful", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Login was successful", Toast.LENGTH_LONG).show();
 //                 Add the code to new activity
-                Intent intent = new Intent(MainActivity.this, HomepageActivity.class);
-                startActivity(intent);
+                    Intent intent = new Intent(MainActivity.this, HomepageActivity.class);
+                    startActivity(intent);
+                }
+
+
             }
-
-
-
-
-
         });
     }
 
-    private boolean validate(String name, String Passwaord) {
-        if (button3.equals(Username) && Passwaord.equals(password)) {
+    private boolean validate(String name, String passwaord) {
+        if (button3.equals(Username) && passwaord.equals(password)) {
             return true;
         }
         return false;
