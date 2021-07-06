@@ -7,6 +7,7 @@ import android.os.Bundle;
  import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static androidx.constraintlayout.motion.widget.TransitionBuilder.validate;
@@ -15,6 +16,7 @@ public class MainActivity<passwaord> extends AppCompatActivity {
     private EditText ename;
     private EditText epassword;
     private Button button3;
+    private TextView eattempt;
 
     private String Username = "Admin";
     private String password = "12345678";
@@ -31,13 +33,13 @@ public class MainActivity<passwaord> extends AppCompatActivity {
         ename = findViewById(R.id.ename);
         epassword = findViewById(R.id.epassword);
         button3 = findViewById(R.id.button3);
-
+        eattempt = findViewById(R.id.eattempt);
 
         button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public int hashCode() {
-                return super.hashCode();
-            }
+//            @Override
+//            public int hashCode() {
+//                return super.hashCode();
+//            }
 
             @Override
             public void onClick(View v) {
@@ -79,7 +81,7 @@ public class MainActivity<passwaord> extends AppCompatActivity {
     private boolean validate(String name, String Passwaord) {
         if (button3.equals(Username) && passwaord.equals(password)) {
             return true;
-
+        }
             return false;
         }
 
