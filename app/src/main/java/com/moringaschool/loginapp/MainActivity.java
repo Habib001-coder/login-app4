@@ -52,13 +52,13 @@ public class MainActivity<passwaord> extends AppCompatActivity {
                 } else {
                     isValid = validate(inputName, inputPassword);
                     if (!isValid)
-//                        (
-//                        counter --;
+                        (
+                        counter -- ;
 
 
 
 
-//                    Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show()()
+                    Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
 
                     if (counter == 0) ;
 
@@ -67,8 +67,7 @@ public class MainActivity<passwaord> extends AppCompatActivity {
 
                 }
 
-
-            }
+            }else
 
             {
 
