@@ -12,11 +12,14 @@ import android.widget.Toast;
 
 import static androidx.constraintlayout.motion.widget.TransitionBuilder.validate;
 
-public class MainActivity<passwaord> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     private EditText ename;
     private EditText epassword;
     private Button button3;
     private TextView eattempt;
+
+
+
 
     private String Username = "Admin";
     private String password = "12345678";
@@ -50,13 +53,13 @@ public class MainActivity<passwaord> extends AppCompatActivity {
 
 
                     Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
-                } else if (isValid){
+                } else if (isValid) {
 //                    isValid = validate(inputName, inputPassword);
 //                    if (!isValid) {
 //                        counter--;
 //
 //
-                        Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
 //
 //                        if (counter == 0) ;
 //
@@ -66,8 +69,6 @@ public class MainActivity<passwaord> extends AppCompatActivity {
 //                    }
 
 
-
-
 //                }else if (!isValid){
 //
 //                    Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
@@ -75,18 +76,19 @@ public class MainActivity<passwaord> extends AppCompatActivity {
 ////
 //                        button3.setEnabled(false);
 
-                }
-                else
-
-                {
+                } else {
 
                     Toast.makeText(MainActivity.this, "Login was successful", Toast.LENGTH_LONG).show();
 //                 Add the code to new activity
                     Intent intent = new Intent(MainActivity.this, HomepageActivity.class);
                     startActivity(intent);
-                }
 
+//aedsrfadding the last activity
+//                    Toast.makeText(MainActivity.this, "Welcome to login process", Toast.LENGTH_LONG).show();
+//                     = new Intent(MainActivity.this, CommentsActivity.class);
+//                    startActivity(intent);
 
+            }
             }
         });
     }
