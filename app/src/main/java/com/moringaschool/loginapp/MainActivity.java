@@ -82,9 +82,8 @@ public class MainActivity<passwaord> extends AppCompatActivity {
         if (button3.equals(Username) && passwaord.equals(password)) {
             return true;
         }
-            return false;
-        }
+        return false;
+    }
 
 
-
-
+}
