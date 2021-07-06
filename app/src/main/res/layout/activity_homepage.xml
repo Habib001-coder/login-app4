@@ -5,6 +5,7 @@
     android:id="@+id/acthome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/be"
     tools:context=".HomepageActivity">
 
     <TextView
@@ -12,10 +13,11 @@
         android:layout_width="244dp"
         android:layout_height="29dp"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="236dp"
         android:layout_marginEnd="68dp"
-        android:text="Welcome to a new activity"
+        android:text="Welcome to my LogIn App"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,5 +30,16 @@
         android:layout_marginStart="68dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ebutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Proceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -68,6 +68,12 @@ public class MainActivity<passwaord> extends AppCompatActivity {
 
 
 
+//                }else if (!isValid){
+//
+//                    Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
+//                    if (counter == 0) ;
+////
+//                        button3.setEnabled(false);
 
                 }
                 else
@@ -89,7 +95,7 @@ public class MainActivity<passwaord> extends AppCompatActivity {
         if (button3.equals(Username) && passwaord.equals(password)) {
             return true;
         }
-        return false;
+           return false;
     }
 
 
