@@ -83,11 +83,10 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, HomepageActivity.class);
                     startActivity(intent);
 
-//aedsrfadding the last activity
+//adding the last activity
 //                    Toast.makeText(MainActivity.this, "Welcome to login process", Toast.LENGTH_LONG).show();
-//                     = new Intent(MainActivity.this, CommentsActivity.class);
+//                   intent  = new Intent(MainActivity.this, CommentsActivity.class);
 //                    startActivity(intent);
-
             }
             }
         });
