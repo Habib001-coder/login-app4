@@ -22,7 +22,7 @@ public class MainActivity<passwaord> extends AppCompatActivity {
     private String password = "12345678";
 
 
-    boolean inValid = false;
+    boolean isValid = false;
     private int counter = 5;
 
 
@@ -50,19 +50,24 @@ public class MainActivity<passwaord> extends AppCompatActivity {
 
                     Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
                 } else {
-                    inValid = validate(inputName, inputPassword);
-                    boolean isValid = true;
+                    isValid = validate(inputName, inputPassword);
                     if (!isValid)
-                        counter--;
+                        (
+                        counter --;
+
+
+
+
                     Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
 
                     if (counter == 0) ;
 
                     button3.setEnabled(false);
+
+
                 }
 
-
-            } else
+            }else
 
             {
 
@@ -70,16 +75,17 @@ public class MainActivity<passwaord> extends AppCompatActivity {
 //                 Add the code to new activity
                 Intent intent = new Intent(MainActivity.this, HomepageActivity.class);
                 startActivity(intent);
-
-
             }
+
+
+
 
 
         });
     }
 
     private boolean validate(String name, String Passwaord) {
-        if (button3.equals(Username) && passwaord.equals(password)) {
+        if (button3.equals(Username) && Passwaord.equals(password)) {
             return true;
         }
         return false;
