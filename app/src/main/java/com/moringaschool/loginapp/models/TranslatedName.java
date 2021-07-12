@@ -1,7 +1,5 @@
 
-
-
-package com.moringaschool.loginapp;
+package com.moringaschool.loginapp.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -1,12 +1,12 @@
+package com.moringaschool.loginapp.models;
 
 
-package com.moringaschool.loginapp;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-    public class Chapter {
+    public class Chapters {
 
         @SerializedName("id")
         @Expose
@@ -43,7 +43,7 @@ import com.google.gson.annotations.SerializedName;
          * No args constructor for use in serialization
          *
          */
-        public Chapter() {
+        public Chapters() {
         }
 
         /**
@@ -59,7 +59,7 @@ import com.google.gson.annotations.SerializedName;
          * @param revelationPlace
          * @param translatedName
          */
-        public Chapter(Integer id, String revelationPlace, Integer revelationOrder, Boolean bismillahPre, String nameSimple, String nameComplex, String nameArabic, Integer versesCount, List<Integer> pages, TranslatedName translatedName) {
+        public Chapters(Integer id, String revelationPlace, Integer revelationOrder, Boolean bismillahPre, String nameSimple, String nameComplex, String nameArabic, Integer versesCount, List<Integer> pages, TranslatedName translatedName) {
             super();
             this.id = id;
             this.revelationPlace = revelationPlace;
@@ -145,14 +145,15 @@ import com.google.gson.annotations.SerializedName;
             this.pages = pages;
         }
 
-        public com.moringaschool.loginapp.TranslatedName getTranslatedName() {
+        public TranslatedName getTranslatedName() {
             return translatedName;
         }
 
-        public void setTranslatedName(com.moringaschool.loginapp.TranslatedName translatedName) {
+        public void setTranslatedName(TranslatedName translatedName) {
             this.translatedName = translatedName;
         }
 
     }
+
 
 
