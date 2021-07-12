@@ -10,7 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static androidx.constraintlayout.motion.widget.TransitionBuilder.validate;
+import com.moringaschool.loginapp.HomepageActivity;
+import com.moringaschool.loginapp.R;
 
 public class MainActivity extends AppCompatActivity {
     private EditText ename;
@@ -54,27 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
                     Toast.makeText(MainActivity.this, "Please enter all the details correctly", Toast.LENGTH_LONG).show();
                 } else if (isValid) {
-//                    isValid = validate(inputName, inputPassword);
-//                    if (!isValid) {
-//                        counter--;
-//
-//
                     Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
-//
-//                        if (counter == 0) ;
-//
-//                        button3.setEnabled(false);
-//
-//sxzda
-//                    }
 
-
-//                }else if (!isValid){
-//
-//                    Toast.makeText(MainActivity.this, "Incorrect credential entered", Toast.LENGTH_LONG).show();
-//                    if (counter == 0) ;
-////
-//                        button3.setEnabled(false);
 
                 } else {
 
@@ -83,10 +65,6 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, HomepageActivity.class);
                     startActivity(intent);
 
-//adding the last activity
-//                    Toast.makeText(MainActivity.this, "Welcome to login process", Toast.LENGTH_LONG).show();
-//                   intent  = new Intent(MainActivity.this, CommentsActivity.class);
-//                    startActivity(intent);
             }
             }
         });

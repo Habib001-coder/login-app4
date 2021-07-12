@@ -2,14 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.moringaschool.loginapp">
 
+
     <application
+
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginApp">
-        <activity android:name=".CommentsActivity"></activity>
+        <activity android:name=".Constants"></activity>
+        <activity android:name=".CommentsActivity" />
         <activity android:name=".HomepageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -19,5 +23,5 @@
             </intent-filter>
         </activity>
     </application>
-
+zndhjaXS
 </manifest>
