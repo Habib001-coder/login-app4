@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back003"
-    tools:context=".ui.MainActivity">
+    tools:context=".MainActivity">
+
+
 
     <EditText
         android:id="@+id/ename"
