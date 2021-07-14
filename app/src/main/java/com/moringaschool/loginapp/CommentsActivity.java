@@ -15,18 +15,18 @@ private Button button;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comments);
 
-        button = findViewById(R.id.apis);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ebutton2();
-            }
-
-            private void ebutton2() {
-                Intent intent = new Intent( CommentsActivity.this,Constants.class);
-                startActivity(intent);
-            }
-        });
+//        button = findViewById(R.id.apis);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ebutton2();
+//            }
+//
+//            private void ebutton2() {
+//                Intent intent = new Intent( CommentsActivity.this,Constants.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }
