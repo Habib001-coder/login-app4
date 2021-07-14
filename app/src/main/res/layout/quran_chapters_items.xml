@@ -1,38 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="100dp"
-        android:id="@+id/quran_chapter"
-        android:src="@drawable/ic_launcher_background"
-        android:scaleType="centerCrop"/>
-    
-    <LinearLayout
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#ffffff"/>
 
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:id="@+id/quran_chapterTextView"
-       android:textSize="20dp"
-       android:textStyle="bold"
-       android:text="Quran chapters"
-       android:textColor="@color/purple_500"
-       />
-    <TextView
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/quran_chapter"
+        android:layout_width="130dp"
+        android:layout_height="210dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="281dp"
         android:layout_height="wrap_content"
-        android:textStyle="italic"
-        android:id="@+id/categoryTextView"
-        android:text="One culture"/>
-<!--        android:textColor="@colo"-->
-     </LinearLayout>
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:layout_toRightOf="@+id/quran_chapter"
+        android:layout_toEndOf="@+id/quran_chapter">
+
+
+        <TextView
+            android:id="@+id/quran_chapterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quran chapters"
+            android:textColor="@color/purple_500"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rev_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="revelation_place"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:id="@+id/rev_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="revelation_order"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+        <TextView
+            android:id="@+id/name_simplex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="name_simplex"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/name_complex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="name_complex"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/bismi_pre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bismillah_pre"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/name_arabic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="name_arabic"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/verses_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="verses_count"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/pages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pages"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:id="@+id/tranlated_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translated_name"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>
