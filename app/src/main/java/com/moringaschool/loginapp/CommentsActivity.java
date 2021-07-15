@@ -11,6 +11,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.moringaschool.loginapp.adapters.ChaptersAdapter;
+import com.moringaschool.loginapp.models.Chapters;
+import com.moringaschool.loginapp.services.QuranApi;
+import com.moringaschool.loginapp.services.QuranClient;
 
 import org.w3c.dom.Text;
 
@@ -20,6 +23,7 @@ import javax.xml.transform.Result;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
 
 public class CommentsActivity extends AppCompatActivity {
     @BindView(R.id.progresBar) ProgressBar mprogresBar;
@@ -39,5 +43,10 @@ public class CommentsActivity extends AppCompatActivity {
         getQuranChapters();
     }
 
+public void getQuranChapters(){
+    QuranApi myClient = QuranClient.getClient();
+   Call<Chapters> call = myClient.getChapters(Constants.Quran_Com_Api_BASE_URL);
 
+
+}
     }
