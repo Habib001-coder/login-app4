@@ -21,22 +21,20 @@ import javax.xml.transform.Result;
 import butterknife.BindView;
 
 public class CommentsActivity extends AppCompatActivity {
-    @BindView(R.id.progresBar)
-    ProgressBar mprogresBar;
-    @BindView(R.id.RecyclerViewItem)
-    RecyclerView mRecyclerViewItem;
-    @BindView(R.id.Errormessage)
-    TextView mErrorMessage;
+    @BindView(R.id.progresBar) ProgressBar mprogresBar;
+    @BindView(R.id.RecyclerViewItem) RecyclerView mRecyclerViewItem;
+    @BindView(R.id.Errormessage) TextView mErrorMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comments);
 
-
+    }
         private ChaptersAdapter mAdapter;
         private List<Result> mChapter;
 
 
+
     }
-}
+
