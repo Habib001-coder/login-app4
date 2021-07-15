@@ -8,16 +8,6 @@
     tools:context=".CommentsActivity">
 
 
-    <ProgressBar
-        android:id="@+id/progresBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="178dp"
-        android:layout_marginTop="14dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewItem"
@@ -29,6 +19,20 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="1dp" />
+
+
+
+    <ProgressBar
+        android:id="@+id/progresBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="14dp" />
+
 
     <TextView
         android:id="@+id/Errormessage"

@@ -19,22 +19,25 @@ import java.util.List;
 import javax.xml.transform.Result;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class CommentsActivity extends AppCompatActivity {
     @BindView(R.id.progresBar) ProgressBar mprogresBar;
     @BindView(R.id.RecyclerViewItem) RecyclerView mRecyclerViewItem;
     @BindView(R.id.Errormessage) TextView mErrorMessage;
 
+    private ChaptersAdapter mAdapter;
+    private List<Result> mChapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comments);
+        ButterKnife.bind(this);
 
-    }
-        private ChaptersAdapter mAdapter;
-        private List<Result> mChapter;
-
-
-
+        getQuranChapters();
     }
 
+
+    }
