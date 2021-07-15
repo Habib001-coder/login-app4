@@ -24,11 +24,15 @@ import butterknife.ButterKnife;
 
 public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranChaptersViewHolder> {
     private Context mContext;
-    private List<Result> mChapters;
+    private List<Result> mChapter;
 
-    public ChaptersAdapter(Context context, List<Result> mChapters) {
+    public ChaptersAdapter(Context context, List<Result> mChapter) {
         this.mContext = context;
-        this.mChapters = mChapters;
+        this.mChapter = mChapter;
+    }
+
+    public ChaptersAdapter(List<Result> mChapter) {
+
     }
 
     @NonNull
@@ -43,12 +47,12 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull QuranChaptersViewHolder holder, int position) {
-    holder.bindQuranChapter(mChapters.get(position));
+    holder.bindQuranChapter(mChapter.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return mChapters.size();
+        return mChapter.size();
     }
 
     public class QuranChaptersViewHolder extends RecyclerView.ViewHolder{

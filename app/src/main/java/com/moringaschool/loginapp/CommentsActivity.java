@@ -1,9 +1,11 @@
 package com.moringaschool.loginapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +31,7 @@ import retrofit2.Response;
 
 public class CommentsActivity extends AppCompatActivity {
     @BindView(R.id.progresBar) ProgressBar mprogresBar;
-    @BindView(R.id.RecyclerViewItem) RecyclerView mRecyclerViewItem;
+    @BindView(R.id.RecyclerViewItem) RecyclerView mChapterRecyclerView;
     @BindView(R.id.Errormessage) TextView mErrorMessage;
 
     private ChaptersAdapter mAdapter;
@@ -52,20 +54,40 @@ public void getQuranChapters(){
    call.enqueue(new Callback<Chapters>() {
        @Override
        public void onResponse(Call<Chapters> call, Response<Chapters> response) {
-        hideProgressBar();
-        if(response.isSuccessful());
-        mChapter = response.body().getResults();
+           hideProgressBar();
+           if (response.isSuccessful()) ;
+           mChapter = response.body().getResult();
+           mAdapter = new ChaptersAdapter(CommentsActivity.this.mChapter);
+           mChapterRecyclerView.setAdapter(mAdapter);
+           RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CommentsActivity.this);
+           mChapterRecyclerView.setLayoutManager(layoutManager);
+           mChapterRecyclerView.setHasFixedSize(true);
 
+           showQuranChapter();
        }
+
+       else{
+           showFailureMessage();
+       }
+
 
        @Override
        public void onFailure(Call<Chapters> call, Throwable t) {
-
+       showFailureMessage();
        }
    });
 
 }
-public void hideProgressBar(){
+   public void hideProgressBar(){
+    mprogresBar.setVisibility(View.GONE);
+}
+    public void showQuranChapter(){
+    mChapterRecyclerView.setVisibility(View.VISIBLE);
+    }
+
+    public void showFailureMessage(){
+     mErrorMessage.setText("Check Your Internet connection");
+     mErrorMessage.setVisibility(View.VISIBLE);
 
 }
     }
