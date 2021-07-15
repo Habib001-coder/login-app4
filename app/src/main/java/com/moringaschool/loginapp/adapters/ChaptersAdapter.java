@@ -43,7 +43,7 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull QuranChaptersViewHolder holder, int position) {
-
+    holder.bindQuranChapter(mChapters.get(position));
     }
 
     @Override
