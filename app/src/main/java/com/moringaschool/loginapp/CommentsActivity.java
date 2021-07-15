@@ -46,7 +46,6 @@ public class CommentsActivity extends AppCompatActivity {
 
         getQuranChapters();
     }
-
 public void getQuranChapters(){
     QuranApi myClient = QuranClient.getClient();
    Call<Chapters> call = myClient.getChapters(Constants.Quran_Com_Api_BASE_URL);
@@ -56,7 +55,7 @@ public void getQuranChapters(){
        public void onResponse(Call<Chapters> call, Response<Chapters> response) {
            hideProgressBar();
            if (response.isSuccessful()) ;
-           mChapter = response.body().getResult();
+//           mChapter = response.body().getResult();
            mAdapter = new ChaptersAdapter(CommentsActivity.this.mChapter);
            mChapterRecyclerView.setAdapter(mAdapter);
            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CommentsActivity.this);
@@ -66,9 +65,9 @@ public void getQuranChapters(){
            showQuranChapter();
        }
 
-       else{
-           showFailureMessage();
-       }
+//       else{
+//           showFailureMessage();
+//       }
 
 
        @Override
