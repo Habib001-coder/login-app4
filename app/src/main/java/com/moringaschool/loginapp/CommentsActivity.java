@@ -24,6 +24,8 @@ import javax.xml.transform.Result;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CommentsActivity extends AppCompatActivity {
     @BindView(R.id.progresBar) ProgressBar mprogresBar;
@@ -47,6 +49,23 @@ public void getQuranChapters(){
     QuranApi myClient = QuranClient.getClient();
    Call<Chapters> call = myClient.getChapters(Constants.Quran_Com_Api_BASE_URL);
 
+   call.enqueue(new Callback<Chapters>() {
+       @Override
+       public void onResponse(Call<Chapters> call, Response<Chapters> response) {
+        hideProgressBar();
+        if(response.isSuccessful());
+        mChapter = response.body().getResults();
+
+       }
+
+       @Override
+       public void onFailure(Call<Chapters> call, Throwable t) {
+
+       }
+   });
+
+}
+public void hideProgressBar(){
 
 }
     }
