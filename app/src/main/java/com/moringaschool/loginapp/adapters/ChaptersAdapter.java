@@ -1,14 +1,19 @@
 package com.moringaschool.loginapp.adapters;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.moringaschool.loginapp.R;
 import com.moringaschool.loginapp.models.Chapters;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -24,6 +29,26 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
     public ChaptersAdapter(Context context, List<Result> mChapters) {
         this.mContext = context;
         this.mChapters = mChapters;
+    }
+
+    @NonNull
+    @NotNull
+    @Override
+    public QuranChaptersViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.quran_chapters_items,parent,false);
+        QuranChaptersViewHolder ViewHolder = new QuranChaptersViewHolder(v);
+
+        return ViewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull @NotNull QuranChaptersViewHolder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return mChapters.size();
     }
 
     public class QuranChaptersViewHolder extends RecyclerView.ViewHolder{
