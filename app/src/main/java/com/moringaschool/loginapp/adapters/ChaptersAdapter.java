@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.moringaschool.loginapp.R;
+import com.moringaschool.loginapp.models.Chapters;
 
 import java.util.List;
 
@@ -48,7 +49,17 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
 
 
         }
-
+       public void bindQuranChapter (Result result){
+            mRevelationPlace.setText(result.getSystemId());
+            mRevaltionOrder.setText(result.getSystemId());
+            mNameSimplex.setText(result.getSystemId());
+            mNameCompex.setText(result.getSystemId());
+            mBismillahi.setText(result.getSystemId());
+            mArabicname.setText(result.getSystemId());
+            mVerseCount.setText(result.getSystemId());
+            mQuranPages.setText(result.hashCode());
+            mTranslatedName.setText(result.getSystemId());
+       }
     }
 }
 
