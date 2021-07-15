@@ -36,7 +36,7 @@ public class CommentsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_comments);
         ButterKnife.bind(this);
 
-        getQuranChapters();
+//        getQuranChapters();
     }
 
 
