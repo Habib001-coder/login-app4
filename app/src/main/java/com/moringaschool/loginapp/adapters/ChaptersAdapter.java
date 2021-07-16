@@ -32,6 +32,9 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
     }
 
     public ChaptersAdapter(List<Result> mChapter) {
+    }
+
+    public ChaptersAdapter(String mChapter) {
 
     }
 
@@ -91,4 +94,3 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
        }
     }
 }
-

@@ -1,4 +1,3 @@
-
 package com.moringaschool.loginapp.models;
 
 import com.google.gson.annotations.Expose;

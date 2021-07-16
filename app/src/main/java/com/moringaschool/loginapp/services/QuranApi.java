@@ -7,9 +7,9 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface QuranApi {
-    @GET("Chapters")
+    @GET("/v4/chapters")
     Call<Chapters> getChapters(
-            @Query("language") String myAPIKey
+            @Query("language") String myLanguage
 
     );
 }

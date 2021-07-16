@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.opengl.Visibility;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -30,12 +31,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class CommentsActivity extends AppCompatActivity {
-    @BindView(R.id.progresBar) ProgressBar mprogresBar;
+    @BindView(R.id.progresBar) ProgressBar mProgressBar;
     @BindView(R.id.RecyclerViewItem) RecyclerView mChapterRecyclerView;
     @BindView(R.id.Errormessage) TextView mErrorMessage;
 
     private ChaptersAdapter mAdapter;
-    private List<Result> mChapter;
+    private String mChapter;
 
 
     @Override
@@ -48,21 +49,22 @@ public class CommentsActivity extends AppCompatActivity {
     }
 public void getQuranChapters(){
     QuranApi myClient = QuranClient.getClient();
-   Call<Chapters> call = myClient.getChapters(Constants.Quran_Com_Api_BASE_URL);
+   Call<Chapters> call = myClient.getChapters("en");
 
    call.enqueue(new Callback<Chapters>() {
        @Override
        public void onResponse(Call<Chapters> call, Response<Chapters> response) {
            hideProgressBar();
+           Log.e("TAG","Response " + response );
            if (response.isSuccessful()) ;
 //           mChapter = response.body().getResult();
-           mAdapter = new ChaptersAdapter(CommentsActivity.this.mChapter);
-           mChapterRecyclerView.setAdapter(mAdapter);
-           RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CommentsActivity.this);
-           mChapterRecyclerView.setLayoutManager(layoutManager);
-           mChapterRecyclerView.setHasFixedSize(true);
-
-           showQuranChapter();
+//           mAdapter = new ChaptersAdapter(CommentsActivity.this.mChapter);
+//           mChapterRecyclerView.setAdapter(mAdapter);
+//           RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CommentsActivity.this);
+//           mChapterRecyclerView.setLayoutManager(layoutManager);
+//           mChapterRecyclerView.setHasFixedSize(true);
+//
+//           showQuranChapter();
        }
 
 //       else{
@@ -72,13 +74,15 @@ public void getQuranChapters(){
 
        @Override
        public void onFailure(Call<Chapters> call, Throwable t) {
-       showFailureMessage();
+//       showFailureMessage();
+
+           Log.e("TAG", "ResponseFail " + t.getMessage());
        }
    });
 
 }
    public void hideProgressBar(){
-    mprogresBar.setVisibility(View.GONE);
+    mProgressBar.setVisibility(View.GONE);
 }
     public void showQuranChapter(){
     mChapterRecyclerView.setVisibility(View.VISIBLE);

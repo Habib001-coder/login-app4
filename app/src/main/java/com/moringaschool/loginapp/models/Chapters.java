@@ -6,8 +6,9 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-    public class Chapters {
+import javax.xml.transform.Result;
 
+public class Chapters {
         @SerializedName("id")
         @Expose
         private Integer id;
@@ -152,8 +153,7 @@ import com.google.gson.annotations.SerializedName;
         public void setTranslatedName(TranslatedName translatedName) {
             this.translatedName = translatedName;
         }
-
-    }
+}
 
 
 
