@@ -24,6 +24,7 @@ import java.util.List;
 
 import javax.xml.transform.Result;
 
+//import butterknife.BindView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -42,9 +43,8 @@ public class CommentsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comments);
-        ButterKnife.bind(this);
-
+        setContentView(R.layout.quran_chapters_items);
+//        ButterKnife.bind(this);
         getQuranChapters();
     }
 public void getQuranChapters(){
@@ -74,7 +74,7 @@ public void getQuranChapters(){
 
        @Override
        public void onFailure(Call<Chapters> call, Throwable t) {
-       showFailureMessage();
+//       showFailureMessage();
 
 //           Log.e("TAG", "ResponseFail " + t.getMessage());
        }
@@ -89,7 +89,7 @@ public void getQuranChapters(){
     }
 
     public void showFailureMessage(){
-     mErrorMessage.setText("Check Your Internet connection");
+//     mErrorMessage.setText("Check Your Internet connection");
      mErrorMessage.setVisibility(View.VISIBLE);
 
 }
