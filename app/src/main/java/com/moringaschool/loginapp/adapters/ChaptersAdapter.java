@@ -42,12 +42,13 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
 
     @Override
     public void onBindViewHolder( QuranChaptersViewHolder holder, int position) {
-    holder.bindQuranChapter(mChapter.get(position));
+//    holder.bindQuranChapter(mChapter.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return mChapter.size();
+        return 12;
+
     }
 
 
