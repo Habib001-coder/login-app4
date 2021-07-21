@@ -1,19 +1,15 @@
 package com.moringaschool.loginapp.services;
 
-import android.util.JsonToken;
-
-import com.moringaschool.loginapp.models.Chapters;
+import com.moringaschool.loginapp.models.QuranResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface QuranApi {
-    @GET("/v4/chapters")
-    Call<Chapters> getChapters(
+    @GET("chapters/1")
+    Call<QuranResponse> getChapter(
             @Query("language") String myLanguage
 
     );
 }
-
-

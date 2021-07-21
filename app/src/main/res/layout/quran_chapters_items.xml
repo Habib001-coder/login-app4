@@ -32,27 +32,27 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/rev_place"
+            android:id="@+id/revelation_place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="revelation_place"
+            android:text="revelationPlace"
             android:textColor="@color/black"
             android:textStyle="italic" />
 
 
         <TextView
-            android:id="@+id/rev_order"
+            android:id="@+id/revelation_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="revelation_order"
+            android:text="revelationOrder"
             android:textColor="@color/black"
             android:textStyle="italic" />
 
         <TextView
-            android:id="@+id/name_simplex"
+            android:id="@+id/name_simple"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="name_simplex"
+            android:text="nameSimple"
             android:textColor="@color/black"
             android:textStyle="italic" />
 
@@ -60,15 +60,15 @@
             android:id="@+id/name_complex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="name_complex"
+            android:text="nameComplex"
             android:textColor="@color/black"
             android:textStyle="italic" />
 
         <TextView
-            android:id="@+id/bismi_pre"
+            android:id="@+id/bismillah_pre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="bismillah_pre"
+            android:text="bismillahPre"
             android:textColor="@color/black"
             android:textStyle="italic" />
 
@@ -76,7 +76,7 @@
             android:id="@+id/name_arabic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="name_arabic"
+            android:text="nameArabic"
             android:textColor="@color/black"
             android:textStyle="italic" />
 
@@ -84,7 +84,7 @@
             android:id="@+id/verses_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="verses_count"
+            android:text="versesCount"
             android:textColor="@color/black"
             android:textStyle="italic" />
 
@@ -98,10 +98,10 @@
 
 
         <TextView
-            android:id="@+id/tranlated_name"
+            android:id="@+id/translated_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Translated_name"
+            android:text="translatedName"
             android:textColor="@color/black"
             android:textStyle="italic" />
 
