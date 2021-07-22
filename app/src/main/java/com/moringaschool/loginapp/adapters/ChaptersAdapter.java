@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.moringaschool.loginapp.R;
 import com.moringaschool.loginapp.models.Chapter;
 import com.moringaschool.loginapp.services.QuranApi;
-//import com.moringaschool.loginapp.models.Chapter;
+import com.moringaschool.loginapp.models.Chapter;
 
 import java.util.List;
 
@@ -34,7 +34,8 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
 
     @Override
     public QuranChaptersViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.quran_chapters_items,parent,false);
+        View v = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.quran_chapters_items,parent,false);
         QuranChaptersViewHolder ViewHolder = new QuranChaptersViewHolder(v);
 
         return ViewHolder;
@@ -42,12 +43,12 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
 
     @Override
     public void onBindViewHolder( QuranChaptersViewHolder holder, int position) {
-//    holder.bindQuranChapter(mChapter.get(position));
+    holder.bindQuranChapter(mChapter.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 12;
+        return mChapter.size();
 
     }
 
@@ -57,7 +58,7 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
 
         @BindView(R.id.progresBar) ImageView mQuranImageView;
         @BindView(R.id.quran_chapterTextView)TextView mQuranChapter;
-        @BindView(R.id.revelation_place) TextView mrevelationPlace;
+        @BindView(R.id.revelation_place) TextView mRevelationPlace;
         @BindView(R.id.revelation_order) TextView mRevaltionOrder;
         @BindView(R.id.name_simple) TextView mNameSimple;
         @BindView(R.id.name_complex) TextView mNameCompex;
@@ -77,7 +78,7 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
 
         }
        public void bindQuranChapter (Chapter chapters){
-            mrevelationPlace.setText( chapters.getRevelationPlace());
+            mRevelationPlace.setText( chapters.getRevelationPlace());
             mRevaltionOrder.setText(  chapters.getRevelationOrder());
             mNameSimple.setText(chapters.getNameSimple());
             mNameCompex.setText(chapters.getNameComplex());

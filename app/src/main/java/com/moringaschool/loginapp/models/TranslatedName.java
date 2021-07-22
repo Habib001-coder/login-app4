@@ -1,10 +1,8 @@
 package com.moringaschool.loginapp.models;
 
 
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
 public class TranslatedName {
 
     @SerializedName("language_name")
@@ -14,7 +12,8 @@ public class TranslatedName {
     @Expose
     private String name;
 
-    /**
+
+   /**
      * No args constructor for use in serialization
      *
      */
@@ -49,3 +48,4 @@ public class TranslatedName {
     }
 
 }
+;

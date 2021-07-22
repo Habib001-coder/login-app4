@@ -1,12 +1,15 @@
 package com.moringaschool.loginapp.models;
+
+
+import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class QuranResponse {
 
-    @SerializedName("chapter")
+    @SerializedName("chapters")
     @Expose
-    private Chapter chapter;
+    private List<Chapter> chapters = null;
 
     /**
      * No args constructor for use in serialization
@@ -17,19 +20,20 @@ public class QuranResponse {
 
     /**
      *
-     * @param chapter
+     * @param chapters
      */
-    public QuranResponse(Chapter chapter) {
+    public QuranResponse(List<Chapter> chapters) {
         super();
-        this.chapter = chapter;
+        this.chapters = chapters;
     }
 
-    public Chapter getChapter() {
-        return chapter;
+    public List<Chapter> getChapters() {
+        return chapters;
     }
 
-    public void setChapter(Chapter chapter) {
-        this.chapter = chapter;
+    public void setChapters(List<Chapter> chapters) {
+        this.chapters = chapters;
     }
 
 }
+

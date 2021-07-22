@@ -16,6 +16,7 @@ import com.moringaschool.loginapp.models.QuranResponse;
 import com.moringaschool.loginapp.services.QuranApi;
 import com.moringaschool.loginapp.services.QuranClient;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //import butterknife.BindView;
@@ -26,6 +27,13 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class CommentsActivity extends AppCompatActivity {
+    RecyclerView recyclerView;
+    ProgressBar progressBar;
+    LinearLayoutManager layoutManager;
+    ChaptersAdapter adapter;
+    List<Chapter> chapterList =new ArrayList<>();
+
+
     @BindView(R.id.progresBar) ProgressBar mProgressBar;
     @BindView(R.id.RecyclerViewItem) RecyclerView mChapterRecyclerView;
     @BindView(R.id.Errormessage) TextView mErrorMessage;
@@ -39,10 +47,12 @@ public class CommentsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comments);
+
+
         Log.e("TAG","Oncreate comments activity " );
 
 
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
         getQuranChapters();
     }
 public void getQuranChapters(){
@@ -64,7 +74,7 @@ public void getQuranChapters(){
            hideProgressBar();
            Log.e("TAG", "Response " + response);
            if (response.isSuccessful()) {
-//               mChapter = response.body().getChapter();
+               mChapter = (List<Chapter>) response.body().getChapters();
                mAdapter = new ChaptersAdapter(CommentsActivity.this,mChapter);
                mChapterRecyclerView.setAdapter(mAdapter);
                RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CommentsActivity.this);
@@ -78,7 +88,7 @@ public void getQuranChapters(){
 
        @Override
        public void onFailure(Call<QuranResponse> call, Throwable t) {
-//       showFailureMessage();
+       showFailureMessage();
 
            Log.e("TAG", "ResponseFail " + t.getMessage());
        }

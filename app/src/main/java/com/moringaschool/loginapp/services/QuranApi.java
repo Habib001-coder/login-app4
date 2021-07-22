@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface QuranApi {
-    @GET("chapters/1")
+    @GET("chapters")
     Call<QuranResponse> getChapter(
             @Query("language") String myLanguage
 
