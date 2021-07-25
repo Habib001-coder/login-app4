@@ -48,7 +48,7 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
 
     @Override
     public int getItemCount() {
-        return mChapter.size();
+        return 20;
 
     }
 
