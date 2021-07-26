@@ -71,12 +71,12 @@ public void getQuranChapters(){
 
        @Override
        public void onResponse(Call<QuranResponse> call, Response<com.moringaschool.loginapp.models.QuranResponse> response) {
-           hideProgressBar();
+//           hideProgressBar();
            Log.e("TAG", "Response " + response);
            if (response.isSuccessful()) {
                mChapter = (List<Chapter>) response.body().getChapters();
                mAdapter = new ChaptersAdapter(CommentsActivity.this,mChapter);
-               mChapterRecyclerView.setAdapter(mAdapter);
+//               mChapterRecyclerView.setAdapter(mAdapter);
                RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CommentsActivity.this);
                mChapterRecyclerView.setLayoutManager(layoutManager);
                mChapterRecyclerView.setHasFixedSize(true);
@@ -103,7 +103,7 @@ public void getQuranChapters(){
     }
 
     public void showFailureMessage(){
-     mErrorMessage.setText("Check Your Internet connection");
+//     mErrorMessage.setText("Check Your Internet connection");
      mErrorMessage.setVisibility(View.VISIBLE);
 
 }

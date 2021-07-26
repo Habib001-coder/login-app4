@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back003"
+    android:background="@drawable/quran"
     tools:context=".MainActivity">
-
 
 
     <EditText
         android:id="@+id/ename"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="73dp"
+        android:layout_marginTop="139dp"
+        android:background="@color/white"
         android:ems="10"
         android:hint="Enter Name"
         android:inputType="textEmailAddress"
@@ -25,10 +25,11 @@
     <EditText
         android:id="@+id/epassword"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="167dp"
+        android:layout_marginTop="212dp"
+        android:background="@color/white"
         android:ems="10"
         android:hint="Enter password"
         android:inputType="textPersonName" />
@@ -39,20 +40,21 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="242dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="292dp"
         android:text="sign in" />
 
     <TextView
         android:id="@+id/eattempt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="146dp"
+        android:layout_height="29dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="343dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="379dp"
+        android:background="@color/white"
         android:text="Number of attempt 5" />
 
 </RelativeLayout>
