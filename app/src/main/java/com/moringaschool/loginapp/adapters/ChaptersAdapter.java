@@ -23,11 +23,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranChaptersViewHolder> {
-//    private Context mContext;
+    private Context mContext;
     private List<Chapter> mChapter;
 
     public ChaptersAdapter(Context context, List<Chapter> mChapters) {
-//        this.mContext = context;
+        this.mContext = context;
         this.mChapter = mChapters;
 
 
