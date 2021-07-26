@@ -26,12 +26,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CommentsActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
-    ProgressBar progressBar;
-    LinearLayoutManager layoutManager;
-    ChaptersAdapter adapter;
-    List<Chapter> chapterList =new ArrayList<>();
+//public class CommentsActivity extends AppCompatActivity {
+//    RecyclerView recyclerView;
+//    ProgressBar progressBar;
+//    LinearLayoutManager layoutManager;
+//    ChaptersAdapter adapter;
+//    List<Chapter> chapterList =new ArrayList<>();
 
 
     @BindView(R.id.progresBar) ProgressBar mProgressBar;
