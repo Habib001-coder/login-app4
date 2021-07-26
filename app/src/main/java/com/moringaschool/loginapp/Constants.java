@@ -10,10 +10,10 @@ public class Constants extends AppCompatActivity {
     public static  final  String Quran_Com_Api_BASE_URL = "https://api.quran.com/api/v4/";
 
 
+
 //
-////
-////    protected void onCreate(Bundle savedInstanceState) {
-////        super.onCreate(savedInstanceState);
-////        setContentView(R.layout.activity_constants);
-//    }
-////}
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_constants);
+    }
+//}
