@@ -103,7 +103,7 @@ public void getQuranChapters(){
     }
 
     public void showFailureMessage(){
-//     mErrorMessage.setText("Check Your Internet connection");
+     mErrorMessage.setText("Check Your Internet connection");
      mErrorMessage.setVisibility(View.VISIBLE);
 
 }
