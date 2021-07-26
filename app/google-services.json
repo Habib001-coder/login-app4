@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "424930496786",
+    "project_id": "login-app-748f1",
+    "storage_bucket": "login-app-748f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424930496786:android:d457110e56463f6e7023cb",
+        "android_client_info": {
+          "package_name": "com.moringaschool.loginapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424930496786-fhd6t35qbp7vufvfp4d2cb3pc4il5k5b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moringaschool.loginapp",
+            "certificate_hash": "e299b44578ed3065f62ec8a6fe81dbc59bec6789"
+          }
+        },
+        {
+          "client_id": "424930496786-ppi4gn97ea4156irj6q4irlmcr7fm55h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO_Gc2dcy0DtwsGHh7yIPVL31hry-nld0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "424930496786-ppi4gn97ea4156irj6q4irlmcr7fm55h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
