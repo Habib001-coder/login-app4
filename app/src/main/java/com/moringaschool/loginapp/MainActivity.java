@@ -14,10 +14,10 @@ import com.moringaschool.loginapp.HomepageActivity;
 import com.moringaschool.loginapp.R;
 
 public class MainActivity extends AppCompatActivity {
-//    private EditText ename;
-//    private EditText epassword;
-//    private Button button3;
-//    private TextView eattempt;
+    private EditText ename;
+    private EditText epassword;
+    private Button button3;
+    private TextView eattempt;
 
 
 
