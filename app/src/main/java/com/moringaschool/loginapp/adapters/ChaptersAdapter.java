@@ -55,21 +55,21 @@ public class ChaptersAdapter extends RecyclerView.Adapter<ChaptersAdapter.QuranC
     }
 
 
-//
-//    public class QuranChaptersViewHolder extends RecyclerView.ViewHolder {
-//        public BreakIterator bindQuranChapter;
-////              TextView mCha
-//        @BindView(R.id.progresBar) ImageView mQuranImageView;
-//        @BindView(R.id.quran_chapterTextView)TextView mQuranChapter;
-//        @BindView(R.id.revelation_place) TextView mRevelationPlace;
-//        @BindView(R.id.revelation_order) TextView mRevalationOrder;
-//        @BindView(R.id.name_simple) TextView mNameSimple;
-//        @BindView(R.id.name_complex) TextView mNameCompex;
-//        @BindView(R.id.bismillah_pre) TextView mBismillahi;
-//        @BindView(R.id.name_arabic) TextView mArabicname;
-//        @BindView(R.id.verses_count) TextView mVerseCount;
-//        @BindView(R.id.pages) TextView mQuranPages;
-//        @BindView(R.id.translated_name) TextView mTranslatedName;
+
+    public class QuranChaptersViewHolder extends RecyclerView.ViewHolder {
+        public BreakIterator bindQuranChapter;
+//              TextView mCha
+        @BindView(R.id.progresBar) ImageView mQuranImageView;
+        @BindView(R.id.quran_chapterTextView)TextView mQuranChapter;
+        @BindView(R.id.revelation_place) TextView mRevelationPlace;
+        @BindView(R.id.revelation_order) TextView mRevalationOrder;
+        @BindView(R.id.name_simple) TextView mNameSimple;
+        @BindView(R.id.name_complex) TextView mNameCompex;
+        @BindView(R.id.bismillah_pre) TextView mBismillahi;
+        @BindView(R.id.name_arabic) TextView mArabicname;
+        @BindView(R.id.verses_count) TextView mVerseCount;
+        @BindView(R.id.pages) TextView mQuranPages;
+        @BindView(R.id.translated_name) TextView mTranslatedName;
 
 //                private Context mContext;
         public QuranChaptersViewHolder(View itemView) {
