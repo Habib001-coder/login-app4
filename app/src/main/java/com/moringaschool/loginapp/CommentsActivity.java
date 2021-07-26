@@ -76,7 +76,7 @@ public void getQuranChapters(){
            if (response.isSuccessful()) {
                mChapter = (List<Chapter>) response.body().getChapters();
                mAdapter = new ChaptersAdapter(CommentsActivity.this,mChapter);
-//               mChapterRecyclerView.setAdapter(mAdapter);
+               mChapterRecyclerView.setAdapter(mAdapter);
                RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CommentsActivity.this);
                mChapterRecyclerView.setLayoutManager(layoutManager);
                mChapterRecyclerView.setHasFixedSize(true);
