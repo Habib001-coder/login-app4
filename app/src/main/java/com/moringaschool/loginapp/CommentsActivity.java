@@ -79,7 +79,7 @@ public void getQuranChapters(){
 //               mChapterRecyclerView.setAdapter(mAdapter);
                RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(CommentsActivity.this);
                mChapterRecyclerView.setLayoutManager(layoutManager);
-               mChapterRecyclerView.setHasFixedSize(true);
+//               mChapterRecyclerView.setHasFixedSize(true);
                showQuranChapter();
            } else {
                showFailureMessage();
